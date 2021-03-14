@@ -1,0 +1,15 @@
+#container {
+	display: grid;
+	grid-template-columns: 200px 200px auto;
+	grid-row-gap: 0px;
+	grid-column-gap: 20px;
+	background-color: royalblue;
+	padding: 5px;
+}
+
+#container > p {
+	padding: 5px;
+	color: royalblue;
+	background-color: white;
+	text-align: center;
+}

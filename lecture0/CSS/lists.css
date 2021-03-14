@@ -1,0 +1,19 @@
+ol ul{
+	color: red;
+}
+
+ol > li{
+	color: blue;
+}
+
+ul {
+	color: orange;
+}
+
+#c {
+	float: right;
+}
+
+#b {
+	margin-left: 45%;
+}
