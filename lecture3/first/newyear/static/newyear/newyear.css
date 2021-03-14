@@ -1,0 +1,11 @@
+h1 {
+	font-family: ariel;
+	font-size: 100px;
+	text-align: center;
+	color: white;
+	background-color: royalblue;
+	padding: 20px;
+	width: 50%;
+	margin-right: auto;
+	margin-left: auto;
+}
