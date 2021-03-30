@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Log In</title>
+</head>
+<body>
+	{% if message %}
+		{{message}}
+	{% endif %}	
+	<form action="{% url 'signin' %}" method="post">
+		{% csrf_token %}
+		<input type="text" name="username" placeholder="Username">
+		<input type="password" name="password" placeholder="password">
+		<button>Submit</button>
+	</form>
+</body>
+</html>

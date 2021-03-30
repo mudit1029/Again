@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Details</title>
+</head>
+<body>
+	<a style="float:right;" href="{% url 'signout' %}">Log Out</a>
+	<h2>Welcome , {{user.first_name}}</h2>
+	<ul>
+		<li>First Name: {{user.first_name}} </li>
+		<li>Last Name: {{user.last_name}} </li>
+		<li>E-mail: {{user.email}} </li>
+	</ul>
+</body>
+</html>
