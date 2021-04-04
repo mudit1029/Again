@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Api</title>
+	<script type="text/javascript">
+		document.addEventListener("DOMContentLoaded", () => {
+			fetch("https://www.myapifilms.com/imdb/idIMDB?idIMDB=tt2250912&token=616e58d6-e204-4ce0-8e2e-5362ac52cb10")
+			.then(response => response.json())
+			.then(data => {
+				const title = data.data.movies[0].title;
+				const year = data.data.movies[0].year;
+				const release = data.data.movies[0].releaseDate;
+				const poster = data.data.movies[0].urlPoster;
+				const director = data.data.movies[0].directors[0].name;
+				document.querySelector("#title").innerHTML = `Title: ${title}`;
+				document.querySelector("#year").innerHTML = `Year: ${year}`;
+				document.querySelector("#release").innerHTML = `Release Date: ${release.substring(6,8)}-${release.substring(4,6)}-${release.substring(0,4)}`;
+				document.querySelector("#dir").innerHTML = `Director: ${director}`
+				document.querySelector("#image").setAttribute("src", poster);
+				return false;
+			});
+		});
+	</script>
+</head>
+<body>
+	<h2 id="title"></h2>
+	<h2 id="year"></h2>
+	<h2 id="release"></h2>
+	<h2 id="dir"></h2>
+	<img id="image" src="">
+</body>
+</html>

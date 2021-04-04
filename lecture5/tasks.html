@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tasks</title>
+	<script type="text/javascript">
+		document.addEventListener("DOMContentLoaded", () => {
+			document.querySelector("button").disabled = true;
+			document.querySelector("input").onkeyup = () => {
+				if(document.querySelector("input").value.length > 0) {
+				document.querySelector("button").disabled = false;
+				} else {
+					document.querySelector("button").disabled = true;
+				}
+			};
+			document.querySelector("form").onsubmit = () => {
+				if(document.querySelector("input").value.length > 0) {
+				let task = document.querySelector("input").value;
+				li = document.createElement("li");
+				li.innerHTML = task;
+				document.querySelector("ul").append(li);
+				document.querySelector("input").value = "";
+				document.querySelector("button").disabled = true; 
+				} 	else 	{
+						alert("Jyada Hoshiyari Nhi Merey Bacche");
+				}
+				return false;
+			};
+		});
+	</script>
+</head>
+<body>
+	<h1>Tasks</h1>
+	<ul></ul>
+	<form>
+		<input type="text" name="task" placeholder="Enter Your Task">
+		<button>Submit</button>
+	</form>
+</body>
+</html>
